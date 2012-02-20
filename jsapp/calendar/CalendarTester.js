@@ -1,36 +1,32 @@
+/*
+	Author: mbr
+*/
 
+    /**
+     * JSAPP 
+     *
+     * @module calendar
+     */
 
-function Toggle(Y,calendar)
-{
-	if(calendar.bHidden )
-		Show(Y,calendar) ;
-	else
-		Hide(Y,calendar) ;
-}
-function Hide(Y,calendar)
-{
-/*	var popup = Y.one('#calendar-popup') ;
-	if(popup  )
-		popup.getDOMNode().style.display = 'none' ;*/
-	if(calendar)
-		calendar.hide() ;
-	calendar.bHidden = true ;
-}
-function Show(Y,calendar)
-{
-/*	var popup = Y.one('#calendar-popup') ;
-	if(popup  )
-		popup.getDOMNode().style.display = 'block' ;*/
-	if(calendar)
-		calendar.show() ;	
-	calendar.bHidden = false ;
-}
-
+    /**
+     *
+     * @module calendar
+     * @submodule CalendarTester
+     *
+     */
+    
+    /*
+     *
+     * @uses LeftPanel
+     * @uses CalendarTestPanel
+	 * @uses YUI3 Library
+     *
+     */
+    
 
 var text =
 	'<div id="content_root" style="padding-left:0px"> ' +
 	'<div id="links"  class="panel_control_part" >' +
-//	'<br>' +
 	'	<div>' +
 	'   	<div class="editline" >' +
 		'	<div class="static" >' +
@@ -130,53 +126,8 @@ var text =
 	'</div>'  +
 	'</div>'  ;
 	
-YUI().add('left-panel',function(Y)
-{
-	function LeftPanel(cfg)
-	{
-		LeftPanel.superclass.constructor.apply(this,arguments) ;
-	}
-	Y.extend(LeftPanel,Y.Base,{
-		initializer: function(config) {
-			this._pcon = config.root ;
-			this._initPanel(config) ;
-			this.after('init',this._postinit) ;
-			this.on('render',this._renderer) ;
-		},
-		_initPanel: function(config){
-			this.panel = new Y.Panel({ 
-				width: (config.width != undefined) ? config.title : 260 , //height:360 , 
-				headerContent : (config.title != undefined) ? config.title : 'Control Panel',
-				contentBox : config.content ,
-				footerContent: '',
-				modal: (config.modal != undefined) ? config.modal : false ,
-				buttons: [ 
-				    { section: 'footer' , value: 'OK' },
-				    { section: 'footer' , value: 'Cancel' }    
-			    ]
-			})  ;
-		},
-		_postinit: function(ev){
-			this.panel.set('hideOn',[]) ;			
-		},
-		_renderer: function(ev) {
-			this.panel.render(this._pcon) ;
-			this.panel.move(1,1) ;
-		},
-/*		_initAttrs: function(C,B,D){
-			
-		},*/
-		getPanel: function(){
-			return this.panel ;
-		},
-		panel: null,
-		_pcon: null
-	}) ;
-	Y.LeftPanel = LeftPanel ;
-	
-} , '3.4.1',{ requires: [ 'panel','node-base' ] }) ;
 
-YUI().use('calendartest-panel','calendar-panel','left-panel','datatype-date' , 'node-base' , 'node-screen' /*,  'dd-plugin' , 'dd-constrain'*/, function(Y,response) {
+YUI().use('calendartest-panel','calendar-panel','left-panel','datatype-date' , 'node-base' , 'node-screen' , function(Y,response) {
 
 	function CalendarConfig(lang,count,columns,width,dlgConfig)
 	{

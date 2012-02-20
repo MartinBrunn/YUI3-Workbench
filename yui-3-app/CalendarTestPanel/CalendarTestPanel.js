@@ -1,8 +1,33 @@
+/*
+ * Author : mbr
+ */
+
+/*
+ * @module calendartest-panel
+ * @uses calendar-multipane
+ * @uses calendar-panel 
+ * @uses dd-plugin 
+ * @uses feast-plugin
+ */
 YUI().add('calendartest-panel',function(Y){
-	
+
+	/*
+	 * class for testing yui3 calendar extensions
+	 * 
+	 * @class CalendarTestPanel
+	 * @extends Y.Base
+	 * @uses CalendarMultiPane
+	 * @uses CalendarPanel
+	 * @uses Y.Drag
+	 * @uses CalendarFeastPlugin
+	 * 
+	 */
 	function CalendarTestPanel(config){
 		CalendarTestPanel.superclass.constructor.apply(this,arguments) ;
 	}
+	/*
+	 *  No Attributes
+	 */
 	CalendarTestPanel.ATTRS = {} ;
 	CalendarTestPanel.NAME = 'calendarPanel' ;
 	CalendarTestPanel.DLG_TEMPLATE =
