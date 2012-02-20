@@ -1,0 +1,61 @@
+<!-- script type="text/javascript" src="../../combo?3.4.1/build/yui-base/yui-base-min.js&3.4.1/build/intl-base/intl-base-min.js&3.4.1/build/oop/oop-min.js&3.4.1/build/event-custom-base/event-custom-base-min.js&3.4.1/build/event-custom-complex/event-custom-complex-min.js&3.4.1/build/intl/intl-min.js&3.4.1/build/attribute-base/attribute-base-min.js&3.4.1/build/features/features-min.js&3.4.1/build/dom-core/dom-core-min.js&3.4.1/build/dom-base/dom-base-min.js&3.4.1/build/selector-native/selector-native-min.js&3.4.1/build/selector/selector-min.js&3.4.1/build/node-core/node-core-min.js&3.4.1/build/node-base/node-base-min.js&3.4.1/build/event-base/event-base-min.js&3.4.1/build/attribute-complex/attribute-complex-min.js&3.4.1/build/base-base/base-base-min.js&3.4.1/build/pluginhost-base/pluginhost-base-min.js&3.4.1/build/pluginhost-config/pluginhost-config-min.js&3.4.1/build/dom-style/dom-style-min.js&3.4.1/build/node-style/node-style-min.js&3.4.1/build/classnamemanager/classnamemanager-min.js&3.4.1/build/event-delegate/event-delegate-min.js&3.4.1/build/node-event-delegate/node-event-delegate-min.js&3.4.1/build/substitute/substitute-min.js&3.4.1/build/datatype-date-parse/datatype-date-parse-min.js&3.4.1/build/datatype-date-format/lang/datatype-date-format_en-US.js&3.4.1/build/datatype-date-format/datatype-date-format-min.js&3.4.1/build/plugin/plugin-min.js&3.4.1/build/node-pluginhost/node-pluginhost-min.js&3.4.1/build/dom-screen/dom-screen-min.js&3.4.1/build/node-screen/node-screen-min.js&3.4.1/build/calendarnavigator/calendarnavigator-min.js&3.4.1/build/calendar/lang/calendar.js&3.4.1/build/calendar-base/lang/calendar-base.js&3.4.1/build/event-synthetic/event-synthetic-min.js&3.4.1/build/event-focus/event-focus-min.js&3.4.1/build/base-pluginhost/base-pluginhost-min.js&3.4.1/build/widget-base/widget-base-min.js&3.4.1/build/widget-htmlparser/widget-htmlparser-min.js&3.4.1/build/widget-uievents/widget-uievents-min.js&3.4.1/build/widget-skin/widget-skin-min.js&3.4.1/build/datatype-date-math/datatype-date-math-min.js&3.4.1/build/calendar-base/calendar-base-min.js&3.4.1/build/calendar/calendar-min.js"></script -->
+
+
+<!-- Load the YUI CSSButton CSS file from gallery to create simple and quick buttons -->
+<!-- link href="http://yui.yahooapis.com/gallery-2011.08.31-20-57/build/gallerycss-cssbutton/gallerycss-cssbutton.css" type="text/css" rel="stylesheet" / -->
+
+<!-- Add an additional blue button style -->
+
+
+<!-- JS -->
+<!--  link rel="stylesheet" type="text/css" href="../../3.4.1/build/cssgrids/cssgrids-min.css">
+<link rel="stylesheet" type="text/css" href="../../3.4.1/build/widget-base/assets/skins/sam/widget-base.css">
+<link rel="stylesheet" type="text/css" href="../../3.4.1/build/widget-base/assets/skins/sam/widget-base.css">
+<link rel="stylesheet" type="text/css" href="../../3.4.1/build/calendar-base/assets/skins/sam/calendar-base.css">
+<link rel="stylesheet" type="text/css" href="../../3.4.1/build/calendarnavigator/assets/skins/sam/calendarnavigator.css">
+<link rel="stylesheet" type="text/css" href="../../3.4.1/build/calendar/assets/skins/sam/calendar.css" -->
+<!-- script type="text/javascript" src="../../3.4.1/build/yui-base/yui-base.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/intl-base/intl-base.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/oop/oop.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/event-custom-base/event-custom-base.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/event-custom-complex/event-custom-complex.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/intl/intl.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/calendar-base/lang/calendar-base.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/attribute-base/attribute-base.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/attribute-complex/attribute-complex.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/features/features.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/dom-core/dom-core.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/dom-base/dom-base.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/selector-native/selector-native.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/selector/selector.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/node-core/node-core.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/node-base/node-base.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/event-base/event-base.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/event-synthetic/event-synthetic.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/event-focus/event-focus.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/base-base/base-base.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/pluginhost-base/pluginhost-base.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/pluginhost-config/pluginhost-config.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/base-pluginhost/base-pluginhost.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/dom-style/dom-style.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/node-style/node-style.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/classnamemanager/classnamemanager.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/widget-base/widget-base.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/widget-htmlparser/widget-htmlparser.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/event-delegate/event-delegate.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/node-event-delegate/node-event-delegate.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/widget-uievents/widget-uievents.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/widget-skin/widget-skin.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/substitute/substitute.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/datatype-date-parse/datatype-date-parse.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/datatype-date-format/lang/datatype-date-format_en-US.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/datatype-date-format/datatype-date-format.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/datatype-date-math/datatype-date-math.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/calendar-base/calendar-base.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/plugin/plugin.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/node-pluginhost/node-pluginhost.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/dom-screen/dom-screen.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/node-screen/node-screen.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/calendarnavigator/calendarnavigator.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/calendar/lang/calendar.js"></script>
+<script type="text/javascript" src="../../3.4.1/build/calendar/calendar.js"></script -->

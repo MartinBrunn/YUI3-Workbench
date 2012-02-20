@@ -1,0 +1,31 @@
+
+.yui3-skin-sam .yui3-calendar tr.myrow { 
+	width: 100% ;
+}
+.yui3-skin-sam .yui3-calendar td.mycell {
+}
+.yui3-skin-sam .yui3-calendar td.mycell div div * { 
+
+}
+	
+.yui3-skin-sam .yui3-calendar td.mycell div div.monthname { 
+	width: 100% ;
+	padding: 4px ;
+	text-align: center ;
+}
+.yui3-skin-sam .yui3-calendar {
+}
+
+.yui3-skin-sam .yui3-calendar td.mycell div.yui3-u-1-3 .monthname {
+	font-weight: bold ;
+}
+
+.yui3-skin-sam .yui3-calendar table.mygrid {
+	width: 100% ;
+}
+.yui3-skin-sam .yui3-calendar td.mygrid {
+}
+
+.yui3-skin-sam .yui3-calendarmultipane {
+	width: 100% ;
+}

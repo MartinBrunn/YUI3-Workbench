@@ -1,0 +1,9 @@
+	/*
+	var instance = new Y.Resize({
+	    node: acon , //'#panel_control',
+	    preserveRatio: true,
+	    wrap: true,
+	    //maxHeight: 170,
+	    //maxWidth: 400,
+	    handles: 't, tr, r, br, b, bl, l, tl'
+	}); */

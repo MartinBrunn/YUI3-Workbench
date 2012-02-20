@@ -1,0 +1,94 @@
+
+
+.yui3-skin-sam .yui3-calendar .yui3-calendar-sunday { color : red ; background-color: #ffd ;} 
+.yui3-skin-sam .yui3-calendar .yui3-calendar-saturday { background-color: #ffe  ; } 
+.yui3-skin-sam .yui3-calendar .yui3-calendar-holiday { color : magenta ; }
+.yui3-skin-sam .yui3-calendar .yui3-calendar-holisunday { color : magenta ; background-color: #ffd ; font-weight: bold ; }
+.yui3-skin-sam .yui3-calendar .yui3-calendar-today { border: solid 2px black ; }
+.yui3-skin-sam .yui3-calendar-day {
+	font-weight: normal;
+}
+
+.yui3-skin-sam .yui3-calendar .yui3-calendar-day:hover .hint {
+	clear: both ;
+	float: none ;
+	position: absolute ;
+	z-index:5;
+	display: inline ;
+	font-weight: normal;
+}
+
+.yui3-skin-sam .yui3-calendar .yui3-calendar-day:hover .hint .hintholiday{
+	font-weight: normal;
+	color: magenta ;
+}
+.yui3-skin-sam .yui3-calendar .yui3-calendar-day:hover .hint .hintinfo{
+	font-weight: normal;
+	color: #808080 ;
+}
+.yui3-skin-sam .yui3-calendar .yui3-calendar-day:hover .hint .hintspecial{
+	font-weight: normal;
+}
+
+.yui3-skin-sam .yui3-calendar  .yui3-calendar-day .G9 {
+	font-weight: normal;
+	background-color: #F5EEF5 ;
+}
+.yui3-skin-sam .yui3-calendar .yui3-calendar-day .G2 {
+	font-weight: normal;
+	background-color: #F5EEF5 ;
+}
+.yui3-skin-sam .yui3-calendar .yui3-calendar-day .G3 {
+	font-weight: normal;
+	background-color: #F5EEF5 ;
+}
+.yui3-skin-sam .yui3-calendar .yui3-calendar-day .G4 {
+	font-weight: normal;
+	background-color: #F5EEF5 ;
+}
+.yui3-skin-sam .yui3-calendar .yui3-calendar-day .G5 {
+	font-weight: normal;
+	background-color: #F5EEF5 ;
+}
+.yui3-skin-sam .yui3-calendar .yui3-calendar-day .G7 {
+	font-weight: normal;
+	background-color: #F5EEF5 ;
+}
+.yui3-skin-sam .yui3-calendar .yui3-calendar-day .G8 {
+	font-weight: normal;
+	background-color: #F5EEF5 ;
+}
+
+.yui3-skin-sam .yui3-calendar  .SONST {
+	font-weight: normal;
+	background-color: #F4E9F5 ;
+}
+
+.yui3-skin-sam .yui3-calendar  .STILL {
+	font-weight: normal;
+	background-color: #F9F0F9 ;
+}
+
+.yui3-skin-sam .yui3-calendar .yui3-calendar-day .BUND {
+	font-weight: normal;
+	background-color: #808080 ;
+}
+/* this override has longer path */
+.yui3-skin-sam .yui3-calendar .yui3-calendar-day-selected {
+	background-color: #B3D4FF;
+	/*color: #000000;*/
+
+}
+.hint {
+	  clear: both ;
+	  float: none ;
+	  display: none;
+	  position: absolute;
+	  margin-top: +28px;
+	  margin-left: +20px ; 
+	  border: 1px solid #808080;
+	  padding: 2px 12px;
+	  background-color: #ffc ; /*//#98FF98 ; //#ffc;*/
+	  color: black ;
+	  font-weight : normal ;
+	}
