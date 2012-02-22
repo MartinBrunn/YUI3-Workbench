@@ -1,2 +1,16 @@
 YUI3 based Javascript Repository
+<h2>YUI3-Workbench</h2>
+Repository for YUI3 applications. (Examples and extensions) 
+Source : Javascript / Html and CSS code.
+
+### Directory jsapp
+Contains HTML Pages and basic JS scripts and stylesheets for an example or application.
+
+### Directory yui-3-app
+Contains helper classes for examples and applications
+
+### Directory yui-3-ext
+Contains classes based on and extending YUI3 library
+
+
 
