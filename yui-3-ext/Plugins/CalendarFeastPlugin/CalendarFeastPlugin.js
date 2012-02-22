@@ -42,7 +42,7 @@ CalendarFeastPlugin.ATTRS = {
 		var today = new Date() ;
 		if(date.getFullYear() == today.getFullYear())
 		{
-			if(MyDate.SameDay(today,date))
+			if(Y.MyDate.SameDay(today,date))
 				node.addClass("yui3-calendar-today") ;
 		}
 		if(date.getDay() == 6)
@@ -110,7 +110,7 @@ Y.extend(CalendarFeastPlugin, Y.Plugin.Base, {
 		this.afterHostEvent('init',this._initPhase) ;
 		if(config == undefined || config.culture == undefined)
 		{
-			this.set('culture',new CultureEuropean()) ;
+			this.set('culture',new Y.CultureEuropean()) ;
 		}
 		else
 			this.set('culture',config.culture) ;
@@ -144,4 +144,4 @@ Y.extend(CalendarFeastPlugin, Y.Plugin.Base, {
 });
 
 Y.CalendarFeastPlugin = CalendarFeastPlugin ;
-},"3.4.1",{ requires: [ 'plugin' , 'holiday-calculator' ]  } ) ;
+},"3.4.1",{ requires: [ 'plugin' , 'holiday-calculator' , 'mydate' , 'culture-european']  } ) ;

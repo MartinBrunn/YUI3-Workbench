@@ -128,7 +128,7 @@ YUI.add('calendar-panel',function (Y){
 			this.dd.con.set('constrain','view') ;			
 		},
 		_afterRender: function(ev){
-			this.calendar.plug(Y.CalendarFeastPlugin,{ culture : new CultureEuropean }) ;
+			this.calendar.plug(Y.CalendarFeastPlugin,{ culture : new Y.CultureEuropean }) ;
 			if(this.cfgCalendar.selectionType == 2)
 				this.calendar.plug(Y.CalendarSelectionConstraint) ;
 
@@ -149,4 +149,4 @@ YUI.add('calendar-panel',function (Y){
 		id_cal: 0
 	}) ;
 	Y.CalendarPanel = CalendarPanel ;
-},'3.4.1',{ requires: [ 'panel' , 'dd-plugin' /*, 'calendar-multipane'*/ ] }) ;
+},'3.4.1',{ requires: [ 'panel' , 'dd-plugin' , 'culture-european' , 'feast-plugin' , 'calendar-multipane' ] }) ;

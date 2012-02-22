@@ -267,4 +267,4 @@ YUI.add('calendar-multipane',function (Y){
 		
 	}) ;
 	Y.CalendarMultiPane = CalendarMultiPane ;
-},'3.4.1',{ requires : [ 'calendar', 'calendarbase' ]}) ;
+},'3.4.1',{ requires : [ 'calendar' ]}) ;

@@ -1,3 +1,4 @@
+YUI().add('mydate',function(Y){
 	function MyDate()
 	{
 	}
@@ -15,3 +16,5 @@
 			return false ;
 		return d1.getDate() == d2.getDate() && d1.getMonth() == d2.getMonth() ;
 	} ;
+	Y.MyDate = MyDate ;
+},'3.4.1',{ requires: [ ] } ) ;

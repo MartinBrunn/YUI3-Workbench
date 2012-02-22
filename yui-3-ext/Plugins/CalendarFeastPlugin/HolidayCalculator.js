@@ -41,9 +41,9 @@ YUI.add('holiday-calculator',function(Y) {
 					if(algo != feast[0])
 						continue ;
 					var feastDate = cache[feast[0]][ year ] ;
-					feastDate = MyDate.addDays(feastDate,feast[1]) ;
+					feastDate = Y.MyDate.addDays(feastDate,feast[1]) ;
 					//time = feastDate.getTime() + feast[1]*1000*60*60*24 ;
-					if(MyDate.SameDay(date,feastDate))
+					if(Y.MyDate.SameDay(date,feastDate))
 						return true ;
 				}
 				return false ;	
@@ -107,8 +107,8 @@ YUI.add('holiday-calculator',function(Y) {
 			}
 			return ret(holiday,text,special,specialInfo,specialText) ; 
 		} ;
-		this.SameDay = MyDate.SameDay ;
+		this.SameDay = Y.MyDate.SameDay ;
 	}
 	
 	Y.HolidayCalculator = HolidayCalculator ;
-},"3.4.1",{ requires: [ 'base' ]  } ) ;
+},"3.4.1",{ requires: [ 'base' , 'mydate' ]  } ) ;

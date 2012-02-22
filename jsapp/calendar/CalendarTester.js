@@ -127,31 +127,69 @@ var text =
 	'</div>'  ;
 	
 
-YUI().use('calendartest-panel','calendar-panel','left-panel','datatype-date' , 'node-base' , 'node-screen' , function(Y,response) {
+YUI({
+	//base: "file://D:/Source/Web/yui-3.4",
+	injected: true ,
+	//filter: 'DEBUG' ,
+	groups: {
+		calendar: {
+			modules: {
+				'left-panel' : {
+					requires: [ 'panel' /*, 'calendar'*/ ],
+					fullpath : "../../yui-3-ext/LeftPanel/LeftPanel.js"
+				},
+				'calendartest-panel' : {
+					requires:  [/*'calendar' ,*/ 'left-panel' /*, 'calendar-panel'*/],
+					fullpath : "../../yui-3-app/CalendarTestPanel/CalendarTestPanel.js" 
+				} //,
+/*					'CultureEuropean' : {
+						requires: [ ],
+						fullpath : "../../yui-3-ext/Culture/CultureEuropean.js"
+					},
 
-	function CalendarConfig(lang,count,columns,width,dlgConfig)
-	{
-		this.width = width ;
-		this.lang = lang ;
-		this.count = count  ;
-		this.columns = columns  ;
-		this.dlgConfig = dlgConfig   ;
-		this.bAdjustMonth = true ;
-	 
-	    this.pos = { left: 0 , right : 0 } ;
-	    this.leftMargin = 0 ;
-	    this.topMargin = 0 ;
-	    this.selectionType = CalendarConfig.SINGLE_SELECTION ;
-	    this.bUsePanel = true ;
-	    var that = this ;
+					'holidaycalculator' : {
+						requires: [ 'base' , 'mydate' ],
+						fullpath : "../../yui-3-ext/Plugins/CalendarFeastPlugin/HolidayCalculator.js"
+					},
+
+					'feastplugin' : {
+						requires: [ 'plugin' , 'holidaycalculator' , 'feastgerman'],
+						fullpath : "../../yui-3-ext/Plugins/CalendarFeastPlugin/CalendarFeastPlugin.js"
+					},
+					'calendar-panel' : {
+						requires: [ 'panel' , 'calendar' , 'feastplugin' , 'CultureEuropean' ],
+						fullpath : "../../yui-3-ext/CalendarPanel/CalendarPanel.js"					
+					},
+					'mydate' : {
+						requires: [ 'base' ],
+						fullpath : "../../yui-3-ext/Date/MyDate.js"
+					},
+					'feastgerman' : {
+					requires: [ 'languagepack'  ],
+					fullpath : "../../yui-3-ext/Country/FeastGerman.js"
+				},
+				'languagepack' : {
+					requires: [ 'base' ],
+					fullpath : "../../yui-3-ext/Language/LanguagePack.js"
+				},
+				'calendar-multipane' : {
+					requires: [ 'panel' , 'calendar' ],
+				fullpath : "../../yui-3-ext/CalendarMultiPane/CalendarMultiPane.js"
+				},
+				'calendarselectconstraint' : {
+					requires: [ 'panel' , 'calendar' ],
+					fullpath : "../../yui-3-ext/Plugins/CalendarSelectionConstrain/CalendarSelectionConstrain.js"
+				}*/
+			}
+		}
 	}
+}).use('calendartest-panel','left-panel','datatype-date' , 'node-base' , 'node-screen' , function(Y,response) {
 
-	CalendarConfig.SINGLE_SELECTION = 1 ;
-	CalendarConfig.MULTIPLE_SELECTION = 'multiple' ;
 	
 	var block = Y.one('#document_root') ;
 	if(block)
 		block.setXY([1,1]) ;
+	/*
 	var pcon = Y.Node.create('<div id=panel_control"> </div>') ;
 	var pcal = Y.Node.create('<div id="panel_calendar"> </div>') ;
 	var root = Y.one('#panel_root') ;
@@ -172,10 +210,10 @@ YUI().use('calendartest-panel','calendar-panel','left-panel','datatype-date' , '
 	panel = P.getPanel() ;
 	panel.render(pcon) ;
 	panel.move(1,1) ;
-
+*/
 	// TODO 
 	var calendar = null ;
-	calendar = new Y.CalendarTestPanel(config) ;
+	calendar = new Y.CalendarTestPanel() ;
 //	calendar.render() ;
 	 
     /* TODO ????

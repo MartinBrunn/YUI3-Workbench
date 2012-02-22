@@ -1,6 +1,7 @@
 // CultureEuropean
 // Algorithms
-
+YUI().add('culture-european',function(Y) {
+	
 function CultureEuropean()
 {
 }
@@ -37,10 +38,10 @@ CultureEuropean.prototype = {
 	{
 		var easter = this.EasterGauss(year) ;
 		
-		var fasching = MyDate.addDays(easter,-49) ;
+		var fasching = Y.MyDate.addDays(easter,-49) ;
 		weekday = fasching.getDay() ;
 		if(weekday)
-			fasching = MyDate.addDays(fasching,7 - weekday) ;
+			fasching = Y.MyDate.addDays(fasching,7 - weekday) ;
 		return fasching ;
 	} ,
 	MUTTERTAG: function (year)
@@ -53,3 +54,5 @@ CultureEuropean.prototype = {
 	}
 	
 } ;
+	Y.CultureEuropean = CultureEuropean ; 
+},'3.4.1',{ requires: [ 'mydate' ]}) ;
