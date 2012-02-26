@@ -98,12 +98,15 @@ YUI.add('calendar-multipane',function (Y){
 			cont = this.get('contentBox') ;
 			var all = cont.all('.monthname') ;
 			month = startDate.getMonth() ;
+			year = startDate.getYear() ;
 			for(i = 0 ; i < all.size() ; ++month,++i)
 			{
 				if(month > 11)
 					month = 0 ;
 				var node = all.item(i).getDOMNode() ;
-				node.innerHTML = this.langPack.getMonthName(month) ;
+				var ydate = Y.DataType.Date ;
+				date = new Date(year,month,1) ;
+				node.innerHTML = ydate.format(date,{ format: "%B" } ) ;
 			}
 		},
 		_initFun: function(ev)
@@ -113,9 +116,6 @@ YUI.add('calendar-multipane',function (Y){
 		_setupCalendar: function(Y,date)
 		{
 			var template = this.makeTemplate(this.count,this.columns) ;
-
-			
-			//var paneinfo = { width : calendar.width , count : calendar.count , template : template , headerRenderer:  ;
 
 			this.navigator.set("shiftByMonths" , Math.floor(this.count)) ;
 

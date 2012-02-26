@@ -70,11 +70,13 @@ YUI().add('calendartest-panel',function(Y){
 		'		<div class="static" >Select Language</div>' +
 		'	   	<div class="selectbox" >' +
 		'      	<select id="sel_lang" name="lang" >' +
-		'      	<option selected>Deutsch</option>' +
-		'      	<option value="Francais">Fran&ccedil;ais</option>' +
-		'      	<option>English</option>' +
-		'      	<option>Putonghua</option>' +
-		'      	<option value="Pinyin">Pinyin</option>' +
+		'      	<option value="de" selected>Deutsch</option>' +
+		'      	<option value="fr">Fran&ccedil;ais</option>' +
+		'      	<option value="en" >English</option>' +
+		'      	<option value="zh-Hans" >Putonghua</option>' +
+		'      	<option value="ru" >Russki</option>' +
+		'      	<option value="es" >Espanol</option>' +
+		'      	<option value="it" >Italiano</option>' +
 		'      	</select>' +
 		'   	</div>' +
 		'   	</div>' +
@@ -461,6 +463,7 @@ YUI().add('calendartest-panel',function(Y){
 									requires: [ 'panel' , 'calendar' ],
 									fullpath : "../../yui-3-ext/Plugins/CalendarSelectionConstrain/CalendarSelectionConstrain.js"
 								}
+								
 							}
 						}
 					}
@@ -468,18 +471,28 @@ YUI().add('calendartest-panel',function(Y){
 			var that = something ;
 			var cfg = config ;
 			that.config = cfg ;
-			YUI( obj ).use('calendar-panel',
-				'selectconstraint-plugin',
-				'calendar-multipane',
-				'resize' , 
-				'resize-plugin',
-				'panel',
-				'datatype-date', 
-				'culture-european',
-				'feast-plugin', 
-				'dd-plugin' , 
-				'dd-constrain',
+			var sel = Y.one('#sel_lang');
+			var lang = sel ? sel.getDOMNode().value : 'de' ;
+			var ar = [ 'calendar-panel',
+     					'selectconstraint-plugin',
+     					'calendar-multipane',
+     					'resize' , 
+     					'resize-plugin',
+     					'panel',
+     					'datatype-date', 
+     					'culture-european',
+     					'feast-plugin', 
+     					'dd-plugin' , 
+     					'dd-constrain'  ] ;
+			ar.push('lang/calendar-base_' + lang) ;
+			ar.push('lang/datatype-date-format_' + lang) ;
+			obj.groups.calendar.modules['lang/calendar-base_' + lang] = 
+				{ fullpath: "../../yui-3-ext/calendar-base/lang/calendar-base_" + lang + ".js "} ;
+			YUI( obj ).use( ar ,
 				function(Y){
+					Y.Intl.setLang('calendar-base',lang) ;
+					Y.Intl.setLang('calendar',lang) ;
+
 					var K = new Y.CalendarPanel({ x: 100+ cfg.leftMargin, 
 						y: cfg.topMargin , 
 						headerContent : 'Calendar',
@@ -502,6 +515,8 @@ YUI().add('calendartest-panel',function(Y){
 			var newpane = "twopane" ;
 			var sel = Y.one('#sel_lang');			
 			lang = sel ? sel.getDOMNode().value : 'Deutsch' ;
+			//Y.Intl.setLang('calendar-base','rus-rus') ;
+			//Y.Intl.setLang('calendar','rus-rus') ;
 			sel = Y.one('#sel_count');
 			
 			count = sel ? sel.getDOMNode().value : 1 ;

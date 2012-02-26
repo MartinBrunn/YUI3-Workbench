@@ -45,6 +45,8 @@ YUI.add('calendar-panel',function (Y){
 		if(config.footerContent == undefined){
 			config.footerContent = '' ;
 		}
+		var that = this ;
+		
 		if(config.buttons == undefined){
 			config.buttons = [ 
 					    { 
@@ -73,6 +75,11 @@ YUI.add('calendar-panel',function (Y){
 		}
 
 		CalendarPanel.superclass.constructor.apply(this, arguments);
+		Y.WidgetButtons.DEFAULT_BUTTONS.close.action = function(e)
+		{
+			e.preventDefault() ;
+			that.destroy() ;
+		} ;
 				
 	}
 
